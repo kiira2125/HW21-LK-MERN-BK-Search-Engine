@@ -25,25 +25,25 @@
 ## Usage
 
 ## Links
--   Github Repository:
-    - https://github.com/brianalegre/21-MERN-Book-Search-Engine
--   Heroku Deployed:
-    - TBD
+*  Github Repository:
+   * https://github.com/kiira2125/HW21-LK-MERN-BK-Search-Engine
+*   Heroku Deployed:
+
 
 
 ## Criteria
-- Set up an Apollo Server to use GraphQL queries and mutations to fetch and modify data, replacing the existing RESTful API.
+* Set up an Apollo Server to use GraphQL queries and mutations to fetch and modify data, replacing the existing RESTful API.
 
-- Modify the existing authentication middleware so that it works in the context of a GraphQL API.
+* Modify the existing authentication middleware so that it works in the context of a GraphQL API.
 
-- Create an Apollo Provider so that requests can communicate with an Apollo Server.
+* Create an Apollo Provider so that requests can communicate with an Apollo Server.
 
 ## Technologies
-- MongoDB
-- Express
-- React
-- Node
-- GrpahQL
+* MongoDB
+* Express
+* React
+* Node
+* GrpahQL (Apollo)
 
 ## Questions
 Questions? Concerns?  Contact Me Below:
@@ -53,4 +53,3 @@ Questions? Concerns?  Contact Me Below:
 
 ## License
 * Licensed under the: [MIT License](https://opensource.org/licenses/MIT) 
-

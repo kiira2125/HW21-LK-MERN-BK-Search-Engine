@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 // set token secret and expiration date
-const secret = 'mysecretsshhhhh';
+const secret = 'mylilSecret';
 const expiration = '2h';
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
       return res.status(400).json({ message: 'You have no token!' });
     }
 
-    // verify token and get user data out of it
+    // verify token  then gets user data out of it
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
       req.user = data;

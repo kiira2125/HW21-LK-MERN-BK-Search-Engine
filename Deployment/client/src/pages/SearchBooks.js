@@ -72,20 +72,6 @@ const SearchBooks = () => {
       return false;
     }
 
-    // FROM API.js
-    // try {
-    //   const response = await saveBook(bookToSave, token);
-
-    //   if (!response.ok) {
-    //     throw new Error('something went wrong!');
-    //   }
-
-    //   // if book successfully saves to user's account, save book id to state
-    //   setSavedBookIds([...savedBookIds, bookToSave.bookId]);
-    // } catch (err) {
-    //   console.error(err);
-    // }
-
     // REFACTORED API.js TO USE MUTATION
     try {
       // Execute mutation and pass in defined parameter data as variables
