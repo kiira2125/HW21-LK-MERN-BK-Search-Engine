@@ -1,4 +1,4 @@
-// IMPORT USER MODEL AND AUTH
+// import of users model and auth
 const { AuthenticationError } = require('apollo-server-express');
 const { User } = require('../models');
 const { signToken } = require('../utils/auth');
@@ -6,7 +6,7 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    // SINGLE USER
+    // code for single user
     me: async () => (user, args) => {
       return User.findOne({
         $or: [
@@ -17,14 +17,14 @@ const resolvers = {
     }
   },
   Mutation: {
-    // CREATE USER
+    // crate user
     addUser: async (parent, { name, email, password }) => {
       const user = await User.create({ name, email, password });
       const token = signToken(user);
 
       return { token, user };
     },
-    // USER LOGIN
+    // login (user)
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -41,7 +41,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    // ADD BOOK TO USER
+    // and book to user / change params to DEFS
     // CHANGE PARAMS TO DEFS
     addBook: async (parent, { userId, bookId }) => {
       return User.findOneAndUpdate(
@@ -54,7 +54,7 @@ const resolvers = {
         }
       );
     },
-    // REMOVE BOOK FROM 'savedBooks'
+    // will remove book from 'savedBooks'
     removeBook: async (parent, { userId, bookId }) => {
       return Profile.findOneAndUpdate(
         { _id: userId },
